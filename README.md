@@ -1,2 +1,2 @@
 # FindAgeInSeconds
-This program will find ones age in seconds.
+This program is self explanitory, it will find ones age in seconds.
