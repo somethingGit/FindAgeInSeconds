@@ -24,7 +24,7 @@ function draw() {
     text(nothingText, windowWidth / 2 - textWidth(nothingText) / 3, windowHeight / 2 + textDescent());
   }
   else {
-    text(ageTime, windowWidth / 2 - textWidth(ageTime) / 2, windowHeight / 2 + textDescent(ageTime));
+    text(ageTime, windowWidth / 2 - textWidth(ageTime) / 2, windowHeight / 2 + textDescent());
   }
 }
 
