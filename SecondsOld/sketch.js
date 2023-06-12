@@ -2,17 +2,23 @@
 // Jason Tse
 // 2023/06/09
 
+//Finds age in seconds
 let getTime = ageTime => (Date.parse(Date()) - Date.parse(ageTime)) / 1000;
-let nothingText = "Please provide a date with formating MM DD, YYYY, HH:MM:SS \n ex. January 1, 2000, 12:00:00";
+
+//Text that you will see if NaN error is found. 
+const nothingText = "Please provide a date with formating MM DD, YYYY, HH:MM:SS\nex. January 1, 2000, 12:00:00";
+
+//Global Variables so all functions have access to this. 
 let inputBox;
 
+//Sets up input box and canvas. 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   inputBox = createInput();
   inputBox.position(width / 2 - inputBox.width / 2, height / 2 + height / 4 - height / 8);
-  //timeAge = window.prompt("Please provide a date with formating MM DD, YYYY, HH:MM:SS \n ex. January 1, 2000, 12:00:00")
 }
 
+//Displays the squares and stuff. 
 function draw() {
   let timeAge = inputBox.value();
   background(256);
@@ -28,6 +34,7 @@ function draw() {
   }
 }
 
+//Resized canvas if window resized. 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   inputBox.position(width / 2 - inputBox.width / 2, height / 2 + height / 4 - height / 8);
