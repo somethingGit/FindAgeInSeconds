@@ -6,7 +6,7 @@
 let getTime = ageTime => (Date.parse(Date()) - Date.parse(ageTime)) / 1000;
 
 //Text that you will see if NaN error is found. 
-const nothingText = "Please provide a date with formating MM DD, YYYY, HH:MM:SS\nex. January 1, 2000, 12:00:00";
+const nothingText = "Please provide a date with formating MM DD, YYYY, HH:MM:SS ex. January 1, 2000, 12:00:00";
 
 //Global Variables so all functions have access to this. 
 let inputBox;
@@ -23,13 +23,13 @@ function draw() {
   let timeAge = inputBox.value();
   background(256);
   frameRate(2);
-  textSize(100);
   let ageTime = getTime(timeAge);
   if(isNaN(ageTime)) {
-    textSize(25);
-    text(nothingText, windowWidth / 2 - textWidth(nothingText) / 3, windowHeight / 2 + textDescent());
+    textSize(width / 50);
+    text(nothingText, windowWidth / 2 - textWidth(nothingText) / 2, windowHeight / 2 + textDescent());
   }
   else {
+    textSize(100 - width / 100);
     text(ageTime, windowWidth / 2 - textWidth(ageTime) / 2, windowHeight / 2 + textDescent());
   }
 }
