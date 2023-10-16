@@ -10,6 +10,7 @@ const nothingText = "Please provide a date with formating MM DD, YYYY, HH:MM:SS 
 
 //Global Variables so all functions have access to this. 
 let inputBox;
+let ageTime;
 
 //Sets up input box and canvas. 
 function setup() {
@@ -22,7 +23,7 @@ function setup() {
 function draw() {
   background(256);
   frameRate(2);
-  let ageTime = getTime(inputBox.value());
+  ageTime = getTime(inputBox.value());
   if(isNaN(ageTime)) {
     textSize(width / 50);
     text(nothingText, windowWidth / 2 - textWidth(nothingText) / 2, windowHeight / 2 + textDescent());
