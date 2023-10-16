@@ -18,12 +18,11 @@ function setup() {
   inputBox.position(width / 2 - inputBox.width / 2, height / 2 + height / 4 - height / 8);
 }
 
-//Displays the squares and stuff. 
+//Displays the squares, and text.
 function draw() {
-  let timeAge = inputBox.value();
   background(256);
   frameRate(2);
-  let ageTime = getTime(timeAge);
+  let ageTime = getTime(inputBox.value());
   if(isNaN(ageTime)) {
     textSize(width / 50);
     text(nothingText, windowWidth / 2 - textWidth(nothingText) / 2, windowHeight / 2 + textDescent());
