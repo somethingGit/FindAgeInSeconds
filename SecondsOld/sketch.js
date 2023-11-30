@@ -3,7 +3,10 @@
 // 2023/06/09
 
 //Finds age in seconds
-let getTime = ageTime => (Date.parse(Date()) - Date.parse(ageTime)) / 1000;
+let getTime = (time1, time2) => Date.parse(time2) - Date.parse(time1) / 1000;
+
+//Delta Time
+//let getTime = (time1, time2) => (Date.parse(time2) - Date.parse(time1)) / 86400000;
 
 //Text that you will see if NaN error is found. 
 const nothingText = "Please provide a date with formating MM DD, YYYY, HH:MM:SS ex. January 1, 2000, 12:00:00";
@@ -23,7 +26,7 @@ function setup() {
 function draw() {
   background(256);
   frameRate(2);
-  ageTime = getTime(inputBox.value());
+  ageTime = getTime(Date(), inputBox.value());
   if(isNaN(ageTime)) {
     textSize(width / 50);
     text(nothingText, windowWidth / 2 - textWidth(nothingText) / 2, windowHeight / 2 + textDescent());
